@@ -5,6 +5,17 @@
   font-family: "Markazi Text", serif;
   color: var(--black-color);
 }
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #fff8ec;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 :root {
   --primary-color: #ffb542;
   --black-color: #1a1a1a;
@@ -138,7 +149,8 @@ ul {
 /* Main Container */
 
 .layout-content-wrapper {
-  margin: 30px auto;
+  margin: 30px 0;
+  flex: 1;
 }
 .layout-content-wrapper section {
   padding: 3rem;
@@ -155,6 +167,7 @@ ul {
   right: 50%;
   transform: translate(50%, -50%);
   font-size: 3rem;
+  text-wrap:nowrap;
 }
 .layout-content-wrapper .title-container h1::before {
   content: " ";
@@ -226,5 +239,95 @@ ul {
   }
   .article {
     max-width: 100%;
+  }
+}
+
+/* Main Container [ End ] */
+/* Footer Contaienr [ Start ]  */
+.go-top-btn{
+  position: absolute;
+  right: 1rem;
+  top: -60px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+  transition: .5s ease-out;
+}
+
+.rocket-svg {
+  width: 100%;
+  height: 100%;
+}
+.rocket-svg path{
+  color: #fff;
+
+}
+
+.go-top-btn:hover{
+  background: var(--black-color);
+}
+
+.footer{
+  width: 100%;
+  background-color: #FFDEAC;
+  padding: 1.5rem 1rem;
+}
+.social-media-row{
+  margin-bottom: 10px;
+}
+a.social-media-btn {
+  display: inline-block;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.social-media-btn img{
+  width: 100%;
+}
+
+ 
+.newsletter-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter-container .contacts-container p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.newsletter-container label[for="email"]{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.newsletter-container input[type="email"]{
+  width: 250px;
+  margin-top: 10px;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  outline: none !important;
+  border: none;
+  border-radius: 8px;
+
+}
+.newsletter-container input[type="submit"]{
+  
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  margin-right: 5px;
+  border: none;
+  border-radius: 8px;
+
+}
+@media screen and (max-width: 760px) {
+  .newsletter-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
   }
 }
